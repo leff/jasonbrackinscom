@@ -46,21 +46,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-p  { margin: 0 0 1em; padding: 0; }
+p  {
+  margin: 0 0 1em;
+  padding: 0;
+  line-height: 1.7;
+}
 
 :link {
-  color: #339;
+  color: #999eb1;
   text-decoration: none;
   &:hover {
-    color: #33C;
+    color: #646b80;
   }
 
 }
 :visited {
-  color: #77C;
+  color: #b1b4c5;
   &:hover {
-    color: #33C;
+    color: #646b80;
   }
+}
+
+
+.subheading {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #999eb1;
 }
 
 .has-icon {
