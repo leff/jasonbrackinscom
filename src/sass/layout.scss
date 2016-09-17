@@ -1,4 +1,18 @@
+@import '../../node_modules/flexboxgrid/dist/flexboxgrid';
+
 .container {
-  width: 80vw;
+  width: 98vw;
   margin: 0 auto;
+}
+
+// scale factor 1.6 to counteract adjusting em (via font-size) on html
+// (em in media query is based on browser default, but width setting is affected)
+@media only screen and (min-width: 48em) {
+  .container { width: calc(48rem * 1.6); }
+}
+@media only screen and (min-width: 64em) {
+  .container { width: calc(64rem * 1.6); }
+}
+@media only screen and (min-width: 75rem) {
+  .container { width: calc(75rem * 1.6); }
 }

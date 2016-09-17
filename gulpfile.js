@@ -2,12 +2,11 @@
 
 const gulp = require('gulp'),
       sass = require('gulp-sass'),
-      pug  = require('gulp-pug')
-      // watch = require('gulp-watch')
-;
+      pug  = require('gulp-pug'),
+      del  = require('del');
 
-gulp.task('clean', [], function() {
-
+gulp.task('clean', function(cb) {
+  return del(['public'], cb);
 });
 
 gulp.task('sass', ['clean'], function() {

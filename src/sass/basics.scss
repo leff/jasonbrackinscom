@@ -3,9 +3,85 @@ html, body {
   padding: 0;
   margin: 0;
 }
+html {
+  min-height: 100vh;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 
 .leff {
   font-family: 'Vollkorn', serif;
-  margin-left: -0.25em;
-  margin-right: -0.25em;
+  margin-left: -0.15em;
+  margin-right: -0.15em;
+}
+
+
+/** Typography **/
+html { font-size: 62.5%; }
+body { font-size: 1.2rem; line-height: 1.4; }
+@media only screen and (min-width: 48em) {
+  body{ font-size: 1.4rem; }
+}
+@media only screen and (min-width: 64em) {
+  body{ font-size: 1.7rem; }
+}
+@media only screen and (min-width: 75em) {
+  body{ font-size: 2rem; }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+h1 { font-size: 5.5rem; }
+h2 { font-size: 2.4rem; }
+
+p  { margin: 0 0 1em; padding: 0; }
+
+:link {
+  color: #339;
+  text-decoration: none;
+  &:hover {
+    color: #33C;
+  }
+
+}
+:visited {
+  color: #77C;
+  &:hover {
+    color: #33C;
+  }
+}
+
+.has-icon {
+  i.fa {
+    padding-right: 0.4em;
+  }
+}
+
+.big-icon {
+  display: block;
+  text-align: center;
+  i.fa {
+    display: block;
+    font-size: 5em;
+  }
+}
+
+.constrained-w {
+  max-width: 100%;
+}
+
+.box { padding: 0 .5rem; }
+@media only screen and (min-width: 48em) {
+  .box { padding: 0 1rem; }
+}
+@media only screen and (min-width: 64em) {
+  .box { padding: 0 1.5rem; }
+}
+@media only screen and (min-width: 75em) {
+  .box { padding: 0 2rem; }
 }

@@ -9,6 +9,8 @@
   "author": "Jason Brackins",
   "license": "ISC",
   "devDependencies": {
+    "del": "^2.2.2",
+    "flexboxgrid": "^6.3.1",
     "gulp": "^3.9.1",
     "gulp-pug": "^3.0.4",
     "gulp-sass": "^2.3.2"
