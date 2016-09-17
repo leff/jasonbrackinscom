@@ -21,14 +21,22 @@ html {
 /** Typography **/
 html { font-size: 62.5%; }
 body { font-size: 1.2rem; line-height: 1.4; }
+h1 { font-size: 2.6rem; }
+h2 { font-size: 1.4rem; }
 @media only screen and (min-width: 48em) {
   body{ font-size: 1.4rem; }
+  h1 { font-size: 4rem; }
+  h2 { font-size: 2rem; }
 }
 @media only screen and (min-width: 64em) {
   body{ font-size: 1.7rem; }
+  h1 { font-size: 5.0rem; }
+  h2 { font-size: 2.0rem; }
 }
 @media only screen and (min-width: 75em) {
   body{ font-size: 2rem; }
+  h1 { font-size: 5.5rem; }
+  h2 { font-size: 2.4rem; }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -36,8 +44,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
-h1 { font-size: 5.5rem; }
-h2 { font-size: 2.4rem; }
+
 
 p  { margin: 0 0 1em; padding: 0; }
 
