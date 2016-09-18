@@ -6,24 +6,24 @@ const gulp = require('gulp'),
       del  = require('del');
 
 gulp.task('clean', function(cb) {
-  return del(['public'], cb);
+  return del(['docs'], cb);
 });
 
 gulp.task('sass', ['clean'], function() {
   return gulp.src('src/jb.scss')
     .pipe(sass())
-    .pipe(gulp.dest('public'));
+    .pipe(gulp.dest('docs'));
 });
 
 gulp.task('pug', ['clean'], function() {
   return gulp.src('src/**/*.pug')
     .pipe(pug())
-    .pipe(gulp.dest('public'));
+    .pipe(gulp.dest('docs'));
 });
 
 gulp.task('assets', ['clean'], function() {
   return gulp.src('src/assets/**/*')
-    .pipe(gulp.dest('public/assets'));
+    .pipe(gulp.dest('docs/assets'));
 });
 
 gulp.task('watch', ['build'], function () {
