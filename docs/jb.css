@@ -78,33 +78,15 @@ p {
   letter-spacing: 0.2em;
   color: #999eb1; }
 
-.has-icon i.fa {
-  padding-right: 0.4em; }
-
-.big-icon {
-  display: block;
-  text-align: center; }
-  .big-icon i.fa {
-    display: block;
-    font-size: 5em; }
-
 .constrained-w {
   max-width: 100%; }
 
-.box {
-  padding: 0 .5rem; }
+.has-icon i.fa {
+  padding-right: 0.4em; }
 
-@media only screen and (min-width: 48em) {
-  .box {
-    padding: 0 1rem; } }
-
-@media only screen and (min-width: 64em) {
-  .box {
-    padding: 0 1.5rem; } }
-
-@media only screen and (min-width: 75em) {
-  .box {
-    padding: 0 2rem; } }
+.big-icon i.fa {
+  display: block;
+  font-size: 5em; }
 
 .container-fluid,
 .container {
@@ -816,9 +798,24 @@ p {
   .container {
     width: calc(64rem * 1.6); } }
 
-@media only screen and (min-width: 75rem) {
+@media only screen and (min-width: 75em) {
   .container {
     width: calc(75rem * 1.6); } }
+
+.box {
+  padding: 0 .5rem; }
+
+@media only screen and (min-width: 48em) {
+  .box {
+    padding: 0 1rem; } }
+
+@media only screen and (min-width: 64em) {
+  .box {
+    padding: 0 1.5rem; } }
+
+@media only screen and (min-width: 75em) {
+  .box {
+    padding: 0 2rem; } }
 
 .icon-list {
   list-style-type: none;

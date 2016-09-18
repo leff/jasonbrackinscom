@@ -7,12 +7,24 @@
 
 // scale factor 1.6 to counteract adjusting em (via font-size) on html
 // (em in media query is based on browser default, but width setting is affected)
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: $breakpoint-sm) {
   .container { width: calc(48rem * 1.6); }
 }
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: $breakpoint-md) {
   .container { width: calc(64rem * 1.6); }
 }
-@media only screen and (min-width: 75rem) {
+@media only screen and (min-width: $breakpoint-lg) {
   .container { width: calc(75rem * 1.6); }
+}
+
+
+.box { padding: 0 .5rem; }
+@media only screen and (min-width: $breakpoint-sm) {
+  .box { padding: 0 1rem; }
+}
+@media only screen and (min-width: $breakpoint-md) {
+  .box { padding: 0 1.5rem; }
+}
+@media only screen and (min-width: $breakpoint-lg) {
+  .box { padding: 0 2rem; }
 }

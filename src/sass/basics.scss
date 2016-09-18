@@ -23,17 +23,17 @@ html { font-size: 62.5%; }
 body { font-size: 1.2rem; line-height: 1.4; }
 h1 { font-size: 2.6rem; }
 h2 { font-size: 1.4rem; }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: $breakpoint-sm) {
   body{ font-size: 1.4rem; }
   h1 { font-size: 4rem; }
   h2 { font-size: 2rem; }
 }
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: $breakpoint-md) {
   body{ font-size: 1.7rem; }
   h1 { font-size: 5.0rem; }
   h2 { font-size: 2.0rem; }
 }
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: $breakpoint-lg) {
   body{ font-size: 2rem; }
   h1 { font-size: 5.5rem; }
   h2 { font-size: 2.4rem; }
@@ -74,6 +74,10 @@ p  {
   color: #999eb1;
 }
 
+.constrained-w {
+  max-width: 100%;
+}
+
 .has-icon {
   i.fa {
     padding-right: 0.4em;
@@ -81,25 +85,11 @@ p  {
 }
 
 .big-icon {
-  display: block;
-  text-align: center;
   i.fa {
     display: block;
     font-size: 5em;
   }
 }
 
-.constrained-w {
-  max-width: 100%;
-}
 
-.box { padding: 0 .5rem; }
-@media only screen and (min-width: 48em) {
-  .box { padding: 0 1rem; }
-}
-@media only screen and (min-width: 64em) {
-  .box { padding: 0 1.5rem; }
-}
-@media only screen and (min-width: 75em) {
-  .box { padding: 0 2rem; }
-}
+

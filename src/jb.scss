@@ -1,4 +1,10 @@
 
+// should match breakpoints from flexboxgrid
+$breakpoint-xs: 30em;
+$breakpoint-sm: 48em;
+$breakpoint-md: 64em;
+$breakpoint-lg: 75em;
+
 @import 'sass/basics';
 @import 'sass/layout';
 @import 'sass/modules/icon-link';
