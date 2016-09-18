@@ -6,7 +6,7 @@ const gulp = require('gulp'),
       del  = require('del');
 
 gulp.task('clean', function(cb) {
-  return del(['docs'], cb);
+  return del(['docs/**/*'], cb);
 });
 
 gulp.task('sass', ['clean'], function() {
@@ -26,9 +26,14 @@ gulp.task('assets', ['clean'], function() {
     .pipe(gulp.dest('docs/assets'));
 });
 
+gulp.task('CNAME', ['clean'], function() {
+  return gulp.src('src/CNAME')
+    .pipe(gulp.dest('docs'));
+});
+
 gulp.task('watch', ['build'], function () {
   return gulp.watch('src/**/*', ['build']);
 });
 
-gulp.task('build', ['sass', 'pug', 'assets']);
+gulp.task('build', ['sass', 'pug', 'assets', 'CNAME']);
 gulp.task('default', ['build']);
