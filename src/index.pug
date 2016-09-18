@@ -31,37 +31,44 @@ html
 
         .col-xs-12.col-sm-2.col-lg-3
           .row
-            .col-xs-3.col-sm-12
-              a.info-byte.big-icon(href="https://docs.google.com/document/d/1Danz75nBo7yD-jegYf4-8lL6dcvaSOMdMa6yP8P_6fQ/edit?usp=sharing" target="_blank")
-                i.fa.fa-file-text(aria-hidden="true")
+            .col-xs-3.col-sm-12.hbox
+              a.box.big-icon(href="https://docs.google.com/document/d/1Danz75nBo7yD-jegYf4-8lL6dcvaSOMdMa6yP8P_6fQ/edit?usp=sharing" target="_blank")
+                img(src="assets/resume-75px.png")
                 | Resume
-            .col-xs-3.col-sm-12
-              a.info-byte.big-icon(href="https://docs.google.com/document/d/1AmGH50sifcasqnhqKDcQKT6tg1QwzQ03sZBNN1UzDnc/edit?usp=sharing" target="_blank")
-                i.fa.fa-book(aria-hidden="true")
+                span.tooltip-container
+                  span.tooltip-content Short and Sweet
+                  span.tooltip-arrow
+            .col-xs-3.col-sm-12.hbox
+              a.box.big-icon(href="https://docs.google.com/document/d/1AmGH50sifcasqnhqKDcQKT6tg1QwzQ03sZBNN1UzDnc/edit?usp=sharing" target="_blank")
+                img(src="assets/cv-75px.png")
                 | Curriculum Vitae
+                span.tooltip-container
+                  span.tooltip-content Long and Detailed
+                  span.tooltip-arrow
 
-            .col-xs-3.col-sm-12
-              h3 Pro Links
-              ul.icon-list
-                li
-                  a.has-icon(href="https://github.com/leff" class="thumbnail" title="github: leff" target="_blank")
-                    i.fa.fa-github(aria-hidden="true")
-                    span Github
+            .col-xs-3.col-sm-12.hbox
+              .box
+                h3 Pro Links
+                ul.icon-list
+                  li
+                    a.has-icon(href="https://github.com/leff" class="thumbnail" title="github: leff" target="_blank")
+                      i.fa.fa-github(aria-hidden="true")
+                      span Github
+                  li
+                    a.has-icon(href="https://www.linkedin.com/in/jasonbrackins" class="thumbnail" title="linkedin: jasonbrackins" target="_blank")
+                      i.fa.fa-linkedin-square(aria-hidden="true")
+                      span Linkedin
 
-                li
-                  a.has-icon(href="https://www.linkedin.com/in/jasonbrackins" class="thumbnail" title="linkedin: jasonbrackins" target="_blank")
-                    i.fa.fa-linkedin-square(aria-hidden="true")
-                    span Linkedin
-
-            .col-xs-3.col-sm-12
-              h3 Personal
-              ul.icon-list
-                li
-                  a.has-icon(href="https://twitter.com/leff" class="thumbnail" title="twitter: @leff" target="_blank")
-                    i.fa.fa-twitter(aria-hidden="true")
-                    span Twitter
-                li
-                  a.has-icon(href="https://www.instagram.com/leff.out/" class="thumbnail" title="instagram: @leff.out" target="_blank")
-                    i.fa.fa-instagram(aria-hidden="true")
-                    span Instagram
+            .col-xs-3.col-sm-12.hbox
+              .box
+                h3 Personal
+                ul.icon-list
+                  li
+                    a.has-icon(href="https://twitter.com/leff" class="thumbnail" title="twitter: @leff" target="_blank")
+                      i.fa.fa-twitter(aria-hidden="true")
+                      span Twitter
+                  li
+                    a.has-icon(href="https://www.instagram.com/leff.out/" class="thumbnail" title="instagram: @leff.out" target="_blank")
+                      i.fa.fa-instagram(aria-hidden="true")
+                      span Instagram
 

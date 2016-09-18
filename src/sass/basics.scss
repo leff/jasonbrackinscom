@@ -85,11 +85,64 @@ p  {
 }
 
 .big-icon {
-  i.fa {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2rem;
+  width: 100px;
+  img {
     display: block;
-    font-size: 5em;
+    margin: 0 auto;
+    opacity: 0.75;
+  }
+
+  position: relative;
+  .tooltip-container {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 110px;
+    z-index: 1000;
+  }
+  .tooltip-content {
+    padding: 0.6em;
+    background-color: #646b80;
+    color: #FFF;
+    white-space: nowrap;
+    border-radius: .3em;
+  }
+  .tooltip-arrow {
+    width: 0;
+    height: 0;
+    border-top: .65em solid rgba(0, 0, 0, 0);
+    border-bottom: .65em solid rgba(0, 0, 0, 0);
+    border-right: .65em solid #646b80;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -.55em;
+  }
+
+  &:hover {
+    img { opacity: 1; }
+    .tooltip-container {
+      display: block;
+    }
   }
 }
+@media only screen and (min-width: $breakpoint-sm) {
+  .big-icon {
+    .tooltip-container {
+      left: -110px;
+    }
+    .tooltip-arrow {
+      border-left: .65em solid #646b80;
+      border-right: none;
+      left: auto;
+      right: -.55em;
+    }
+  }
+}
+
 
 
 
