@@ -1,0 +1,59 @@
+doctype
+html
+  head
+    title Jason Brackins
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+    link(rel="Shortcut Icon" href="/assets/leff-logo-0.5x.png" type="image/x-icon")
+    link(href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Vollkorn:700" rel="stylesheet")
+    link(href="/jb.css" rel="stylesheet")
+    link(rel="stylesheet" href="TemplateData/style.css")
+    link(rel="shortcut icon" href="TemplateData/favicon.ico")
+    script(src="TemplateData/UnityProgress.js")
+    script(src="https://use.fontawesome.com/49266aa47a.js")
+  body
+
+    .page-title
+      h1 Jason <span class="leff">leff</span> Brackins
+      h2.subheading Pre-alpha game preview
+
+    .container
+      .row
+        .col-xs-12
+          p Hi, welcome to the pre-alpha of my first game "Maria Rodriquez and the Case of the Missing Hotdogs"
+          p I hope you can take a few minutes to play through what's here, and give me some feedback on it. Just keep in mind that this is a super <em>quick</em> and <b style="color:brown;">dirty</b> rough draft. <b>I am looking to validate the concept</b>.
+          p Please let me know what you think. Do you like the characters? Do you want to know what happens next? Or whatever. Send feedback to jason [dot] brackins [at] gmail [dot] com.
+
+      .row
+        .col-xs-12
+          .template(style="height:720px;")
+            .clear(style="height:600px;")
+              canvas(class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px")
+              br
+              .logo
+              .fullscreen
+                img(src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);")
+              .title Maria Rodriquez and the Case of the Missing Hotdogs
+      .row
+        .col-xs-12
+          p.text-center &laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;
+
+
+  script(type='text/javascript').
+    var Module = {
+      TOTAL_MEMORY: 268435456,
+      errorhandler: null,     // arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+      compatibilitycheck: null,
+      dataUrl: "Release/hotdog.data",
+      codeUrl: "Release/hotdog.js",
+      memUrl: "Release/hotdog.mem"
+    };
+  script(src="Release/UnityLoader.js")
+
+  script.
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-84408339-1', 'auto');
+    ga('send', 'pageview');

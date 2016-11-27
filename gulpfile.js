@@ -32,6 +32,11 @@ gulp.task('CNAME', ['clean'], function() {
     .pipe(gulp.dest('docs'));
 });
 
+gulp.task('hotdog', ['clean'], function() {
+  return gulp.src(['src/games/hotdog/**/*', '!src/games/**/*.pug'])
+    .pipe(gulp.dest('docs/games/hotdog'));
+});
+
 gulp.task('watch', ['build'], function () {
   return gulp.watch('src/**/*', ['build']);
 });
@@ -43,7 +48,7 @@ gulp.task('testserver', ['watch'], function () {
   gulp.watch('src/**/*', ['build']);
 });
 
-gulp.task('build', ['sass', 'pug', 'assets', 'CNAME'],
+gulp.task('build', ['sass', 'pug', 'assets', 'CNAME', 'hotdog'],
   function(cb) {
     browserSync.reload();
     cb();

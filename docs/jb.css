@@ -84,6 +84,9 @@ p {
 .has-icon i.fa {
   padding-right: 0.4em; }
 
+.text-center {
+  text-align: center; }
+
 .big-icon {
   display: inline-block;
   text-align: center;
