@@ -11,8 +11,29 @@ html {
 
 .leff {
   font-family: 'Vollkorn', serif;
+  font-weight: 900;
   margin-left: -0.15em;
   margin-right: -0.15em; }
+
+@keyframes rainbow {
+  0% {
+    fill: #7ac943; }
+  33% {
+    fill: #f05a24; }
+  66% {
+    fill: #3fa9f5; }
+  100% {
+    fill: #7ac943; } }
+
+.leff-logo-svg-inline {
+  display: inline-block;
+  height: .8em;
+  padding: .1em; }
+  .leff-logo-svg-inline .circle {
+    fill: #3fa9f5;
+    animation-name: rainbow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; }
 
 /** Typography **/
 html {

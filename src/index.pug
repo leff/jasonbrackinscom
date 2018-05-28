@@ -3,6 +3,7 @@ html
   head
     title Jason Brackins
     meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+    meta(charset="utf-8")
     link(rel="Shortcut Icon" href="assets/leff-logo-0.5x.png" type="image/x-icon")
     link(href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Vollkorn:900" rel="stylesheet")
     link(href="jb.css" rel="stylesheet")
@@ -21,7 +22,10 @@ html
 
         .col-xs-12.col-sm-7.col-lg-6
           section
-            p Hi, I'm Jason. Sometimes known as <span class="brand">leff</span>.
+            p Hi, I'm Jason. Sometimes known as
+              span.leff-logo-svg-inline(aria-label="leff" title="leff" alt="leff")
+                include ../image-src/leff.logo.svg
+
             p I make web apps with a focus on the <strong>Front End</strong>.
             p Also Photography.
             p Chicago, IL.
