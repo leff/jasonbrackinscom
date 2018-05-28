@@ -9,3 +9,11 @@ $breakpoint-lg: 75em;
 @import 'sass/layout';
 @import 'sass/modules/icon-link';
 @import 'sass/modules/page-title';
+
+.brand {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 900;
+  display: inline-block;
+  transform: rotate(315deg);
+}

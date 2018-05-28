@@ -879,3 +879,10 @@ p {
   background-image: url(assets/texture.jpg);
   background-size: cover;
   color: #FFF; }
+
+.brand {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 900;
+  display: inline-block;
+  transform: rotate(315deg); }

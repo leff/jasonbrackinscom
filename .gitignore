@@ -38,3 +38,5 @@ jspm_packages
 
 public
 firebase-debug.log
+
+.DS_Store
