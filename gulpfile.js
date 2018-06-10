@@ -3,8 +3,7 @@
 const gulp = require('gulp'),
       sass = require('gulp-sass'),
       pug  = require('gulp-pug'),
-      del  = require('del'),
-      browserSync = require('browser-sync').create();
+      del  = require('del');
 
 gulp.task('clean', function(cb) {
   return del(['docs/**/*'], cb);
@@ -48,10 +47,6 @@ gulp.task('testserver', ['watch'], function () {
   gulp.watch('src/**/*', ['build']);
 });
 
-gulp.task('build', ['sass', 'pug', 'assets', 'CNAME', 'hotdog'],
-  function(cb) {
-    browserSync.reload();
-    cb();
-  }
-);
+gulp.task('build', ['sass', 'pug', 'assets', 'CNAME', 'hotdog']);
+
 gulp.task('default', ['build']);
