@@ -1,74 +1,14 @@
+@import 'sass/modules/design-tokens';
+
 html, body {
-  font-family: 'Droid Sans', sans-serif;
+  font-family: $main-font-family;
   padding: 0;
   margin: 0;
+  background-color: $color-text-background;
+  color: $color-text-foreground;
 }
 html {
   min-height: 100vh;
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-$green: #7ac943;
-$red: #f05a24;
-$blue: #3fa9f5;
-
-.leff {
-  font-family: 'Vollkorn', serif;
-  font-weight: 900;
-  margin-left: -0.15em;
-  margin-right: -0.15em;
-}
-
-@keyframes rainbow {
-  0% {
-      fill: $green;
-  }
-  33% {
-      fill: $red;
-  }
-  66% {
-      fill: $blue;
-  }
-  100% {
-    fill: $green;
-  }
-}
-
-.leff-logo-svg-inline {
-  display: inline-block;
-  height: .8em;
-  padding: .1em;
-
-  .circle {
-    fill: $blue;
-    animation-name: rainbow;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-  }
-}
-
-
-/** Typography **/
-html { font-size: 62.5%; }
-body { font-size: 1.2rem; line-height: 1.4; }
-h1 { font-size: 2.6rem; }
-h2 { font-size: 1.4rem; }
-@media only screen and (min-width: $breakpoint-sm) {
-  body{ font-size: 1.4rem; }
-  h1 { font-size: 4rem; }
-  h2 { font-size: 2rem; }
-}
-@media only screen and (min-width: $breakpoint-md) {
-  body{ font-size: 1.7rem; }
-  h1 { font-size: 5.0rem; }
-  h2 { font-size: 2.0rem; }
-}
-@media only screen and (min-width: $breakpoint-lg) {
-  body{ font-size: 2rem; }
-  h1 { font-size: 5.5rem; }
-  h2 { font-size: 2.4rem; }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -77,41 +17,33 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
-
 p  {
-  margin: 0 0 1em;
+  margin: 0 0 0.7em;
   padding: 0;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 :link {
-  color: #999eb1;
+  color: $color-link-foreground;
   text-decoration: none;
-  &:hover {
-    color: #646b80;
+  &:visited {
+    color: $color-link-visited-foreground;
   }
-
-}
-:visited {
-  color: #b1b4c5;
   &:hover {
-    color: #646b80;
+    color: $color-link-hover-foreground;
   }
 }
 
 
-.subheading {
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: #999eb1;
-}
+
 
 .constrained-w {
   max-width: 100%;
 }
 
 .has-icon {
-  i.fa {
+  i,
+  svg {
     padding-right: 0.4em;
   }
 }
@@ -120,64 +52,6 @@ p  {
   text-align: center;
 }
 
-.big-icon {
-  display: inline-block;
-  text-align: center;
-  font-size: 1.2rem;
-  width: 100px;
-  img {
-    display: block;
-    margin: 0 auto;
-    opacity: 0.75;
-  }
-
-  position: relative;
-  .tooltip-container {
-    display: none;
-    position: absolute;
-    top: 40%;
-    left: 110px;
-    z-index: 1000;
-  }
-  .tooltip-content {
-    padding: 0.6em;
-    background-color: #646b80;
-    color: #FFF;
-    white-space: nowrap;
-    border-radius: .3em;
-  }
-  .tooltip-arrow {
-    width: 0;
-    height: 0;
-    border-top: .65em solid rgba(0, 0, 0, 0);
-    border-bottom: .65em solid rgba(0, 0, 0, 0);
-    border-right: .65em solid #646b80;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -.55em;
-  }
-
-  &:hover {
-    img { opacity: 1; }
-    .tooltip-container {
-      display: block;
-    }
-  }
-}
-@media only screen and (min-width: $breakpoint-sm) {
-  .big-icon {
-    .tooltip-container {
-      left: -110px;
-    }
-    .tooltip-arrow {
-      border-left: .65em solid #646b80;
-      border-right: none;
-      left: auto;
-      right: -.55em;
-    }
-  }
-}
 
 
 

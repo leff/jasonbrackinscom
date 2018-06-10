@@ -1,0 +1,36 @@
+@import './design-tokens';
+
+.leff {
+  font-family: $logo-font-family;
+  font-weight: 900;
+  margin-left: -0.15em;
+  margin-right: -0.15em;
+}
+
+@keyframes rainbow {
+  0% {
+      fill: $logo-green;
+  }
+  33% {
+      fill: $logo-red;
+  }
+  66% {
+      fill: $logo-blue;
+  }
+  100% {
+    fill: $logo-green;
+  }
+}
+
+.leff-logo-svg-inline {
+  display: inline-block;
+  height: .8em;
+  padding: .1em;
+
+  .circle {
+    fill: $logo-blue;
+    animation-name: rainbow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+}

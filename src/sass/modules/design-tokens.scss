@@ -1,0 +1,66 @@
+/**
+ * @overview Design Tokens - named values and how to use them
+ */
+
+
+/**
+ * Choices - the raw values
+ * for the most part these should not be used outside of this file
+ */
+
+$breakpoint-xs: 30em;
+$breakpoint-sm: 48em;
+$breakpoint-md: 64em;
+$breakpoint-lg: 75em;
+
+
+$logo-green: #7ac943;
+$logo-red: #f05a24;
+$logo-blue: #3fa9f5;
+
+$pink: rgb(255, 117, 162);
+$pink-light: lighten($pink, 15%);
+$pink-dark: darken($pink, 15%);
+
+$white: rgb(255, 255, 255);
+$white-dark: darken($white, 15%);
+
+$purple: rgb(190, 24, 214);
+$purple-light: lighten($purple, 15%);
+$purple-dark: darken($purple, 15%);
+
+$dark: rgb(15, 15, 15);
+$dark-light: lighten($dark, 15%);
+$dark-dark: darken($dark, 15%);
+
+$blue: rgb(51, 62, 189);
+$blue-light: lighten($blue, 15%);
+$blue-dark: darken($blue, 15%);
+
+
+$font-family-serif: 'Raleway', sans-serif;
+$font-family-logo: 'Vollkorn', serif;;
+
+
+/**
+ * Decisions - Named properties
+ */
+
+$main-font-family: $font-family-serif;
+$logo-font-family: $font-family-logo;
+
+$color-text-background: $white;
+$color-text-foreground: $dark;
+$color-link-foreground: $purple;
+$color-link-hover-foreground: $purple-light;
+$color-link-visited-foreground: $purple-dark;
+
+$color-header-background: $blue-dark;
+$color-header-foreground: $white;
+$color-subheader-foreground: $pink;
+
+
+$big-icon-tooltip-background: $pink;
+$big-icon-tooltip-foreground: $dark;
+$big-icon-tooltip-border-light: $pink-light;
+$big-icon-tooltip-border-dark: $pink-dark;

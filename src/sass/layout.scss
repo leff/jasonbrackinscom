@@ -1,35 +1,58 @@
-@import '../../node_modules/flexboxgrid/dist/flexboxgrid';
+/** Typography **/
+html { font-size: 62.5%; }
+body { font-size: 2rem; line-height: 1.4; }
+@media only screen and (min-width: $breakpoint-sm) {
+  body {
+    font-size: 2rem;
+  }
+}
 
 .container {
   width: 98vw;
   margin: 0 auto;
 }
 
-// scale factor 1.6 to counteract adjusting em (via font-size) on html
-// (em in media query is based on browser default, but width setting is affected)
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "body" "links" "graphic";
+
+  .graphic {
+    grid-area: graphic;
+    text-align: center;
+  }
+  .body {
+    grid-area: body;
+    padding: 1vw;
+  }
+  .links {
+    grid-area: links;
+  }
+}
+
 @media only screen and (min-width: $breakpoint-sm) {
-  .container { width: calc(48rem * 1.6); }
-}
-@media only screen and (min-width: $breakpoint-md) {
-  .container { width: calc(64rem * 1.6); }
-}
-@media only screen and (min-width: $breakpoint-lg) {
-  .container { width: calc(75rem * 1.6); }
+  .container {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: "graphic body links";
+  }
 }
 
+.hboxes {
+  display: flex;
+  padding: 1em;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  .hbox {
+    margin: 1em 0;
+  }
+}
 
-.box { padding: 0 .5rem; }
 @media only screen and (min-width: $breakpoint-sm) {
-  .box { padding: 0 1rem; }
-}
-@media only screen and (min-width: $breakpoint-md) {
-  .box { padding: 0 1.5rem; }
-}
-@media only screen and (min-width: $breakpoint-lg) {
-  .box { padding: 0 2rem; }
-}
-
-.hbox {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  .hboxes {
+    padding: 0;
+    flex-wrap: wrap;
+    .hbox {
+      flex-basis: 100%;
+    }
+  }
 }

@@ -1,19 +1,8 @@
 
-// should match breakpoints from flexboxgrid
-$breakpoint-xs: 30em;
-$breakpoint-sm: 48em;
-$breakpoint-md: 64em;
-$breakpoint-lg: 75em;
-
 @import 'sass/basics';
 @import 'sass/layout';
 @import 'sass/modules/icon-link';
 @import 'sass/modules/page-title';
+@import 'sass/modules/leff-logo';
+@import 'sass/modules/big-icon';
 
-.brand {
-  font-family: 'Vollkorn';
-  font-style: normal;
-  font-weight: 900;
-  display: inline-block;
-  transform: rotate(315deg);
-}

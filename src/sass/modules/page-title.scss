@@ -1,9 +1,27 @@
+@import './design-tokens';
+
+h1 { font-size: calc(2vw + 1vh + 1vmin); }
+@media only screen and (min-width: $breakpoint-sm) {
+  h1 { font-size: calc(2vw + 2vh + 2vmin); }
+}
+
+h2 { font-size: calc(1vw + 1vmin); }
+@media only screen and (min-width: $breakpoint-sm) {
+  h2 { font-size: calc(1vw + 1vh + 1vmin); }
+}
+
 .page-title {
   text-align: center;
   margin-bottom: 4rem;
   padding-bottom: 2rem;
-  background-color: #07080a;
-  background-image: url(assets/texture.jpg);
-  background-size: cover;
-  color: #FFF;
+  background-color: $color-header-background;
+  h1.heading {
+    font-weight: 200;
+    color: $color-header-foreground;
+  }
+  .subheading {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: $color-subheader-foreground;
+  }
 }

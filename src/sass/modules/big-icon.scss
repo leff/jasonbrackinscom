@@ -1,0 +1,61 @@
+@import './design-tokens';
+
+.big-icon {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2rem;
+  width: 100px;
+  img {
+    display: block;
+    margin: 0 auto;
+    opacity: 0.75;
+  }
+
+  position: relative;
+  .tooltip-container {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 110px;
+    z-index: 1000;
+  }
+  .tooltip-content {
+    padding: 0.6em;
+    background-color: $big-icon-tooltip-background;
+    color: $big-icon-tooltip-foreground;
+    white-space: nowrap;
+    border-radius: .3em;
+  }
+  .tooltip-arrow {
+    width: 0;
+    height: 0;
+    border-top: .65em solid $color-text-background;
+    border-bottom: .65em solid $color-text-background;
+    border-right: .65em solid $big-icon-tooltip-background;
+    background-color: $color-text-background;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -.55em;
+  }
+
+  &:hover {
+    img { opacity: 1; }
+    .tooltip-container {
+      display: block;
+    }
+  }
+}
+@media only screen and (min-width: $breakpoint-sm) {
+  .big-icon {
+    .tooltip-container {
+      left: -110px;
+    }
+    .tooltip-arrow {
+      border-left: .65em solid $big-icon-tooltip-background;
+      border-right: none;
+      left: auto;
+      right: -.55em;
+    }
+  }
+}
