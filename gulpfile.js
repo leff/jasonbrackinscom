@@ -3,6 +3,7 @@
 const gulp = require('gulp'),
       sass = require('gulp-sass'),
       pug  = require('gulp-pug'),
+      browserSync = require('browser-sync'),
       del  = require('del');
 
 gulp.task('clean', function(cb) {
