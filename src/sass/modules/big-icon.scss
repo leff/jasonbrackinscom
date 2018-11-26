@@ -15,8 +15,8 @@
   .tooltip-container {
     display: none;
     position: absolute;
-    top: 40%;
-    left: 110px;
+    top: calc(100% + 1em);
+    left: 0;
     z-index: 1000;
   }
   .tooltip-content {
@@ -29,14 +29,14 @@
   .tooltip-arrow {
     width: 0;
     height: 0;
-    border-top: .65em solid $color-text-background;
-    border-bottom: .65em solid $color-text-background;
-    border-right: .65em solid $big-icon-tooltip-background;
+    border-right: .65em solid $color-text-background;
+    border-left: .65em solid $color-text-background;
+    border-bottom: .65em solid $big-icon-tooltip-background;
     background-color: $color-text-background;
     display: block;
     position: absolute;
-    top: 0;
-    left: -.55em;
+    top: -1.2em;
+    left: 2em;
   }
 
   &:hover {
@@ -49,13 +49,17 @@
 @media only screen and (min-width: $breakpoint-sm) {
   .big-icon {
     .tooltip-container {
-      left: -110px;
+      right: calc(.65em + 100%);
+      left: auto;
+      top: 20%;
     }
     .tooltip-arrow {
+      border-top: .65em solid $color-text-background;
+      border-bottom: .65em solid $color-text-background;
       border-left: .65em solid $big-icon-tooltip-background;
-      border-right: none;
       left: auto;
-      right: -.55em;
+      top: 5%;
+      left: calc(100% - 1px);
     }
   }
 }

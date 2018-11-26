@@ -193,8 +193,8 @@ h2 {
   .big-icon .tooltip-container {
     display: none;
     position: absolute;
-    top: 40%;
-    left: 110px;
+    top: calc(100% + 1em);
+    left: 0;
     z-index: 1000; }
   .big-icon .tooltip-content {
     padding: 0.6em;
@@ -205,14 +205,14 @@ h2 {
   .big-icon .tooltip-arrow {
     width: 0;
     height: 0;
-    border-top: 0.65em solid white;
-    border-bottom: 0.65em solid white;
-    border-right: 0.65em solid #ff75a2;
+    border-right: 0.65em solid white;
+    border-left: 0.65em solid white;
+    border-bottom: 0.65em solid #ff75a2;
     background-color: white;
     display: block;
     position: absolute;
-    top: 0;
-    left: -.55em; }
+    top: -1.2em;
+    left: 2em; }
   .big-icon:hover img {
     opacity: 1; }
   .big-icon:hover .tooltip-container {
@@ -220,9 +220,13 @@ h2 {
 
 @media only screen and (min-width: 48em) {
   .big-icon .tooltip-container {
-    left: -110px; }
-  .big-icon .tooltip-arrow {
-    border-left: 0.65em solid #ff75a2;
-    border-right: none;
+    right: calc(.65em + 100%);
     left: auto;
-    right: -.55em; } }
+    top: 20%; }
+  .big-icon .tooltip-arrow {
+    border-top: 0.65em solid white;
+    border-bottom: 0.65em solid white;
+    border-left: 0.65em solid #ff75a2;
+    left: auto;
+    top: 5%;
+    left: calc(100% - 1px); } }
