@@ -64,7 +64,8 @@ body {
   grid-template-areas: "body" "links" "graphic"; }
   .container .graphic {
     grid-area: graphic;
-    text-align: center; }
+    text-align: center;
+    max-width: 100%; }
   .container .body {
     grid-area: body;
     padding: 1vw; }

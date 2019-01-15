@@ -23,6 +23,7 @@ body {
   .graphic {
     grid-area: graphic;
     text-align: center;
+    max-width: 100%;
   }
   .body {
     grid-area: body;
